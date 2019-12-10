@@ -6,35 +6,36 @@ Namify is an app created for BITL CS Project 2. This app can predict your age, g
 
 ---
 
-## Setup
-1. Create virtual environment
-```
-python3 -m venv env
-```
+## Requirements
 
-2. Activating a virtual environment
-```
-source env/bin/activate
-```
-
-3. Install required packages
-```
-pip install -r requirements.txt
-```
-
-4. Run the application in development mode
-```
-FLASK_APP=main.py FLASK_ENV=development flask run
-```
-
-App then will be served on port `5000` through link `localhost:5000`
+- Docker v^19
 
 ---
 
-## Deactivate
-To deactive the virtual environment run:
+## Setup
+1. Build Docker image
 ```
-deactivate
+docker build --tag namify .
+```
+
+2. Run the Docker image with port `3333` exposed
+```
+docker run -d --name namify -p 3333:3333 namify
+```
+
+App then will be served on port `3333` through link `localhost:3333`
+
+---
+
+## Stoping the app
+To stop the container run:
+```
+docker stop namify
+```
+
+After that you can delete the image by running:
+```
+docker rm namify
 ```
 
 ---
