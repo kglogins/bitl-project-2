@@ -1,0 +1,15 @@
+.spinner-border {
+  display: none;
+}
+.title {
+  margin: 20px 0;
+}
+.info {
+  display: flex;
+}
+.info * {
+  padding-right: 2px;
+}
+.info-div {
+  display: none;
+}
