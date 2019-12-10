@@ -17,4 +17,4 @@ def getInfo(name):
   result.update(getNationality(name))
   return result
 
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=3333)

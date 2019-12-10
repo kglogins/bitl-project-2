@@ -5,11 +5,11 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8080
+EXPOSE 3333
 
 CMD python ./main.py
 
 # docker build --tag namify .
-# docker run -d --name namify -p 8080:8888 namify
+# docker run -d --name namify -p 3333:3333 namify
 # docker stop namify
 # docker rm namify
